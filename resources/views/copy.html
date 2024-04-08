@@ -1,0 +1,148 @@
+<style>
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: black;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.theo {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  color: black;
+}
+</style>
+<div class="container">
+
+<br>
+<h3>Application For Transfer Of Rights Form</h3>
+
+<div class="theo">
+  <form action="">
+    <h4>Transferor Details</h4>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="fullname" pattern="[A-Za-z]+" required placeholder="Your name..">
+
+    <label for="mstatus">Marital Status</label>
+    <select type="text" id="mstatus" name="mstatus" required>
+    <option value="" disabled selected>Select Marital Status:</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+          </select>
+
+    <label for="omang">ID No</label>
+    <input type="number" maxlength="9" id="omang" name="omang" required placeholder="Your ID..">
+    
+    <label for="telephone">Telephone No</label>
+    <input type="number" maxlength="8" id="telephone" name="telephone" pattern="7[0-9]{7}" required placeholder="Your telephone no..">
+    <br>
+    <br>
+    <label for="village">Village</label>
+    <select type="text" id="village" name="village" required>
+    <option value="" disabled selected>Select a village:</option>
+            <option value="gaborone">Seronga</option>
+            <option value="palapye">Palapye</option>
+            <option value="mahalapye">Mahalapye</option>
+            <option value="maun">Maun</option>
+            <option value="serowe">Serowe</option>
+            <option value="lobatse">Lobatse</option>
+            <option value="mochudi">Mochudi</option>
+            <option value="moshupa">Moshupa</option>
+            <option value="molepolole">Molepolole</option>
+            <option value="kasane">Kasane</option>
+            <option value="gantsi">Gantsi</option>
+            <option value="mogoditshane">Mogoditshane</option>
+          </select>
+
+    <label for="district">District</label>
+    <select type="text" id="district" name="district" required>
+    <option value="" disabled selected>Select a district:</option>
+            <option value="ghanzi">Ghanzi</option>
+            <option value="chobe">Chobe</option>
+            <option value="kgalagadi">Kgalagadi</option>
+            <option value="kweneng">Kweneng</option>
+            <option value="kgatleng">Kgatleng</option>
+            <option value="south-east">South East</option>
+            <option value="north-west">North West</option>
+            <option value="north-east">North East</option>
+            <option value="southern">Southern</option>
+            <option value="central">Central</option>
+            <option value="ngamiland">Ngamiland</option>
+          </select>
+    
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" min="{{ date('Y-m-d', strtotime('+1 day'))}}" required placeholder="Select a date">
+    <br>
+    <br>
+    <h4>Transferee Details</h4>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="fullname" pattern="[A-Za-z]+" required placeholder="Transferee name..">
+
+    <label for="omang">ID No</label>
+    <input type="number" maxlength="9" id="omang" name="omang" required placeholder="Transferee ID..">
+    
+    <label for="telephone">Telephone No</label>
+    <input type="number" maxlength="8" id="telephone" name="telephone" pattern="7[0-9]{7}" required placeholder="Transferee telephone no..">
+    <br>
+    <br>
+    <label for="village">Village</label>
+    <select type="text" id="village" name="village" required>
+    <option value="" disabled selected>Select a village:</option>
+            <option value="gaborone">Seronga</option>
+            <option value="palapye">Palapye</option>
+            <option value="mahalapye">Mahalapye</option>
+            <option value="maun">Maun</option>
+            <option value="serowe">Serowe</option>
+            <option value="lobatse">Lobatse</option>
+            <option value="mochudi">Mochudi</option>
+            <option value="moshupa">Moshupa</option>
+            <option value="molepolole">Molepolole</option>
+            <option value="kasane">Kasane</option>
+            <option value="gantsi">Gantsi</option>
+            <option value="mogoditshane">Mogoditshane</option>
+          </select>
+
+    <label for="district">District</label>
+    <select type="text" id="district" name="district" required>
+    <option value="" disabled selected>Select a district:</option>
+            <option value="ghanzi">Ghanzi</option>
+            <option value="chobe">Chobe</option>
+            <option value="kgalagadi">Kgalagadi</option>
+            <option value="kweneng">Kweneng</option>
+            <option value="kgatleng">Kgatleng</option>
+            <option value="south-east">South East</option>
+            <option value="north-west">North West</option>
+            <option value="north-east">North East</option>
+            <option value="southern">Southern</option>
+            <option value="central">Central</option>
+            <option value="ngamiland">Ngamiland</option>
+          </select>
+   
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" min="{{ date('Y-m-d', strtotime('+1 day'))}}" required placeholder="Select a date">
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
